@@ -1,0 +1,237 @@
+@import '../../assets/styles/global';
+
+.AirDropModal {
+  &-wrapper {
+    .ant-modal {
+      width: 100% !important;
+      max-width: 49rem;
+    }
+  }
+
+  &-header {
+    padding: 0 calc(2.4rem + 2.2rem + 1.6rem) 0 2.4rem;
+    margin-bottom: 2.4rem;
+
+    &-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $nobel;
+
+      .Icon {
+        flex: 0 0 3.2rem;
+        max-width: 3.2rem;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $white;
+  }
+
+  &-description {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $white;
+    margin-bottom: 8rem;
+  }
+
+  &-task {
+    position: relative;
+    background: #1E2024;
+    border-radius: 2.4rem;
+    padding: .8rem 2.4rem;
+    margin-bottom: 2rem;
+
+    &-overlay {
+      border-radius: 2.4rem;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 23rem;
+      content: '';
+      background: linear-gradient(169.76deg, #3B1C93 7.16%, rgba(70, 7, 186, 0) 62.1%);
+    }
+
+    &-main {
+      position: relative;
+      z-index: 2;
+    }
+
+    &-wrapper {
+      margin: 3rem 0 2rem;
+    }
+
+    &-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $white;
+      margin-bottom: .8rem;
+    }
+
+    &-item {
+      background: #26282D;
+      border-radius: 2rem;
+      overflow: hidden;
+      padding-right: 1.6rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1.2rem;
+      }
+
+      &-icon {
+        padding: 1rem 2rem;
+        background: #2D3035;
+        display: flex;
+
+        .Icon {
+          margin: auto;
+        }
+      }
+
+      &-info {
+        flex: 1;
+        padding: .8rem;
+
+        &-title {
+          font-size: 1.8rem;
+          font-weight: 500;
+          color: $white;
+        }
+
+        &-description {
+          font-size: 1.6rem;
+          color: $gray;
+        }
+      }
+
+      &-btn {
+        .Button {
+          .ant-btn {
+            padding: 0 2rem;
+            height: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &-process {
+    position: relative;
+    height: .4rem;
+    border-radius: .4rem;
+    background: $daisy-bush;
+
+    &-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5%;
+      background: $heliotrope;
+      height: .4rem;
+      border-radius: .4rem;
+    }
+
+    &-title,
+    &-percent {
+      position: absolute;
+      background: linear-gradient(101.14deg, #471AB6 17.53%, #7443EB 108.86%);
+      font-size: 1rem;
+      font-weight: 700;
+      color: $white;
+      padding: .4rem 1.4rem;
+      border-radius: 3rem;
+      bottom: 2rem;
+      left: 5%;
+      transform: translateX(-50%);
+
+
+      &::before {
+        background: linear-gradient(30deg, #471AB6 17.53%, #7443EB 108.86%);
+        mix-blend-mode: darken;
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%) rotate(45deg);
+      }
+    }
+
+    &-title {
+      right: 0;
+      left: unset;
+      transform: none;
+      padding: 1rem 2rem;
+      transform: translateX(40%);
+
+      &::before {
+        mix-blend-mode: lighten;
+      }
+    }
+
+    &-circle {
+      width: 9px;
+      height: 9px;
+      background: linear-gradient(0deg, #6739D9, #6739D9), linear-gradient(0deg, #6739D9, #6739D9), linear-gradient(0deg, #6739D9, #6739D9), #6739D9;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translate(-50%, -50%);
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        border-radius: 50%;
+        background: linear-gradient(0deg, #B394FF, #B394FF), linear-gradient(0deg, #6739D9, #6739D9), linear-gradient(0deg, #6739D9, #6739D9), #6739D9;
+      }
+
+      &::before {
+        top: 2px;
+        bottom: 2px;
+        left: 2px;
+        right: 2px;
+      }
+
+      &::after {
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &-end-time {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+
+    span {
+      color: $nobel
+    }
+  }
+
+  &-rule {
+    margin: 2.8rem 0;
+
+    .Button {
+      .ant-btn {
+        padding: 1.5rem 2rem;
+        height: auto;
+
+        span {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

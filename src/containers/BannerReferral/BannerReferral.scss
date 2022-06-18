@@ -1,0 +1,135 @@
+@import '../../assets/styles/global';
+
+.BannerReferral {
+  position: relative;
+  margin: 2rem 0;
+  background: url('../../assets/images/bg-banner-invite.png');
+  background-size: cover;
+  background-position: center;
+
+  &-referral-btn {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+  }
+
+  &-wrapper {
+    padding: 6rem 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &-image {
+    width: 70rem;
+
+    @media (max-width: 768px) {
+      max-width: 70rem;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-info {
+    padding: 1.8rem 5rem;
+    background: linear-gradient(180deg, #9B1EEE 0%, #68169F 61.98%, #580E8A 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3rem;
+    max-width: 44rem;
+
+    @media (max-width: 768px) {
+      margin-top: 3rem;
+      padding: 1.8rem 3rem;
+    }
+
+
+    &-title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      background: linear-gradient(269.8deg, #E69801 6.7%, #FFBB37 41.63%, #FFF385 62.97%, #FFB932 99.83%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+
+    &-description {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: $white;
+      display: block;
+
+      span {
+        color: $saffron;
+      }
+    }
+
+    .Button {
+      .ant-btn {
+        height: auto;
+        border-radius: 5rem;
+        padding: 1.2rem 2rem;
+
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  &-link {
+    margin-bottom: 0.4rem;
+
+    &-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: .4rem;
+      color: $gorse;
+    }
+
+    &-value {
+      padding: 1.2rem .6rem;
+      border-radius: 2rem;
+      background: rgba($black, 0.7);
+      box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.25);
+
+      span {
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: $white;
+        font-size: 1.4rem;
+      }
+
+
+      .Icon {
+        flex: 0 0 1.5rem;
+        max-width: 1.5rem;
+        margin-left: .4rem;
+      }
+    }
+  }
+
+  &-create-link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 3rem;
+
+    .Icon {
+      flex: 0 0 1.5rem;
+      max-width: 1.5rem;
+      margin-left: .4rem;
+
+    }
+  }
+}

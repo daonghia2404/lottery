@@ -1,0 +1,53 @@
+@import '../../assets/styles/global';
+
+.Table {
+  &-empty {
+    font-size: 2rem;
+    color: $gray;
+    text-align: center;
+    min-height: 20rem;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      filter: grayscale(1);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-main {
+    overflow: auto;
+    background: #1E2024;
+    border-radius: 2.4rem;
+  }
+
+  table {
+    width: 100%;
+
+    thead {
+      td {
+        color: $white;
+        background: $victoria;
+        padding: 1.5rem;
+        white-space: nowrap
+      }
+    }
+
+    tbody {
+      td {
+        color: $melrose;
+      }
+    }
+
+    td {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  &-loadmore {
+    margin-top: 2.4rem;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../assets/styles/global';
+
+.ReferralReward {
+  margin-bottom: 8rem;
+
+  &-title {
+    text-align: center;
+    font-size: 3.5rem;
+    color: $lima;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+  }
+
+  &-main {
+    background: #17181B;
+    border-radius: 4rem;
+
+    &-title {
+      text-align: center;
+      color: $lima;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    &-text {
+      margin-bottom: 2.5rem;
+      font-size: 1.7rem;
+      color: $silver;
+    }
+
+    &-image {
+      margin: 0 auto 2rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-item {
+      &:first-child {
+        background: #1E2024;
+        border-radius: 4rem;
+        flex: 0 0 37.5rem;
+        max-width: 37.5rem;
+        padding: 4rem 1.6rem;
+      }
+
+      &:last-child {
+        padding: 4rem 8rem;
+
+        @media (max-width: 768px) {
+          padding: 4rem 1.6rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
