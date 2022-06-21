@@ -23,12 +23,15 @@ import Task from './Task';
 import CirclePlus from './CirclePlus';
 import Search from './Search';
 import Menu from './Menu';
+import AngleLeft from './AngleLeft';
+import AngleLineLeft from './AngleLineLeft';
+import AngleRight from './AngleRight';
+import AngleLineRight from './AngleLineRight';
+import Ticket from './Ticket';
 
 const Icon = ({ name, className, color, onClick }) => {
   const renderIcon = () => {
     switch (name) {
-      case EIconName.AngleRight:
-        return <AngleRight color={color} />;
       case EIconName.AirDrop:
         return <AirDrop color={color} />;
       case EIconName.AngleCircleLeft:
@@ -67,6 +70,16 @@ const Icon = ({ name, className, color, onClick }) => {
         return <Search color={color} />;
       case EIconName.Menu:
         return <Menu color={color} />;
+      case EIconName.AngleLeft:
+        return <AngleLeft color={color} />;
+      case EIconName.AngleLineLeft:
+        return <AngleLineLeft color={color} />;
+      case EIconName.AngleRight:
+        return <AngleRight color={color} />;
+      case EIconName.AngleLineRight:
+        return <AngleLineRight color={color} />;
+      case EIconName.Ticket:
+        return <Ticket color={color} />;
 
       default:
         return <></>;

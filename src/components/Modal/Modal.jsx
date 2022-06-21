@@ -6,7 +6,7 @@ import Icon, { EIconName } from '@/components/Icon';
 
 import './Modal.scss';
 
-const Modal = ({ visible, onClose, wrapClassName, children }) => {
+const Modal = ({ visible, onClose, wrapClassName, children, centered }) => {
   return (
     <AntdModal
       wrapClassName={classNames('Modal-wrapper', wrapClassName)}
@@ -14,6 +14,7 @@ const Modal = ({ visible, onClose, wrapClassName, children }) => {
       onCancel={onClose}
       closable={false}
       footer={null}
+      centered={centered}
     >
       <div className="Modal-close" onClick={onClose}>
         <Icon name={EIconName.Close} />

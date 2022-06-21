@@ -53,8 +53,18 @@ const Header = () => {
 
   const dataMenu = [
     { link: Paths.Home, title: 'Home', icon: EIconName.Home, onClick: () => handleNavigateLink(Paths.Home) },
-    { link: ' ', title: 'Lottery', icon: EIconName.Lottery },
-    { link: ' ', title: 'Daily Lottery', icon: EIconName.DailyLottery },
+    {
+      link: Paths.Lottery,
+      title: 'Lottery',
+      icon: EIconName.Lottery,
+      onClick: () => handleNavigateLink(Paths.Lottery),
+    },
+    {
+      link: Paths.DailyLottery,
+      title: 'Daily Lottery',
+      icon: EIconName.DailyLottery,
+      onClick: () => handleNavigateLink(Paths.DailyLottery),
+    },
     { link: ' ', title: 'MGC Token', icon: EIconName.MgcToken },
     { title: 'Air Drop', icon: EIconName.AirDrop, onClick: handleOpenAirDropModal },
   ];

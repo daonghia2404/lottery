@@ -100,7 +100,7 @@
       border-radius: 3.6rem;
       cursor: pointer;
 
-      &:last-child {
+      &:not(:first-child) {
         margin-left: -2rem;
       }
 

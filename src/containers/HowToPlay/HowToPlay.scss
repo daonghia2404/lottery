@@ -1,0 +1,132 @@
+@import '../../assets/styles/global';
+
+.HowToPlay {
+  padding: 2.4rem 4.8rem;
+
+  @media (max-width: 575px) {
+    padding: 2.4rem;
+  }
+
+  &-title {
+    font-size: 3rem;
+    color: $white;
+    font-weight: 900;
+    margin-bottom: 2.4rem;
+  }
+
+  &-cards {
+    margin: 0 -1rem;
+
+    &-item {
+      flex: 0 0 calc(100% / 3);
+      max-width: calc(100% / 3);
+      padding: 0 1rem;
+      margin-bottom: 4rem;
+
+      @media (max-width: 991px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      &-image {
+        width: 20rem;
+        margin: 0 auto 1rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 1.2rem;
+      }
+
+      &-description {
+        color: $gray;
+        font-size: 2.3rem;
+      }
+    }
+
+    &-main {
+      border-radius: 2.5rem;
+      text-align: center;
+      padding: 1.6rem 1.6rem 3.6rem;
+      height: 100%;
+    }
+  }
+
+
+  &-content {
+    background: #1E2023;
+    padding: 6.4rem;
+    border-radius: 2.5rem;
+    margin-bottom: 2.4rem;
+
+    @media (max-width: 575px) {
+      padding: 3.2rem;
+    }
+
+    &-ticket {
+      padding: 1rem 3rem;
+      border-radius: 2.5rem;
+      background: #141515;
+      margin-bottom: 3.6rem;
+
+      &-icon {
+        flex: 0 0 3rem;
+        max-width: 3rem;
+        margin-right: .4rem;
+
+        .Icon {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 0 1.6rem;
+        color: #BB7AFD;
+      }
+
+      &-description {
+        font-size: 3rem;
+        font-weight: 900;
+        color: $white;
+        padding: 0 1.6rem;
+        margin-left: auto;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 1.6rem;
+    }
+
+    h4 {
+      color: $white;
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 1.6rem;
+
+      @media (max-width: 575px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      color: $dusty-gray;
+      font-size: 3rem;
+      margin-bottom: 1.6rem;
+      font-weight: 500;
+
+      @media (max-width: 575px) {
+        font-size: 2rem;
+      }
+    }
+  }
+}

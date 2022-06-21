@@ -1,0 +1,5 @@
+export const EKeyTab = {
+  MY_TICKETS: 'MY_TICKETS',
+  MY_WINNINGS: 'MY_WINNINGS',
+  HISTORY: 'HISTORY',
+};

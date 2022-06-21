@@ -1,0 +1,130 @@
+@import '../../assets/styles/global';
+
+.ModalLotteryResults {
+  &-wrapper {
+    .ant-modal {
+      width: 100% !important;
+      max-width: 62rem;
+      transform: translateY(30%);
+
+      .ant-modal-body {
+        padding: 5rem;
+      }
+    }
+  }
+
+  &-text-result {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 900;
+    text-align: center;
+    font-size: 9.6rem;
+    position: absolute;
+    font-style: italic;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    padding-right: 1.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 7rem;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 5rem;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 4rem;
+      transform: translate(-50%, -350%);
+    }
+
+    &.lose {
+      background: linear-gradient(180deg, #FF002E 0%, #911844 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    &.win {
+      background: linear-gradient(180deg, #52FF00 0%, #319118 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+  }
+
+  &-image {
+    position: absolute;
+    width: 40rem;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-subtitle {
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: .6rem;
+    color: $white;
+    text-align: center;
+  }
+
+  &-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #9D9D9D;
+    margin-bottom: 1.2rem;
+    text-align: center;
+
+    &-status {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      text-align: center;
+
+      &.lose {
+        color: #A91340;
+      }
+
+      &.win {
+        color: #50A51D;
+      }
+    }
+
+    strong {
+      color: $white;
+      font-weight: 600;
+    }
+
+    span {
+      font-weight: 600;
+      color: $shocking-pink;
+    }
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 900;
+    color: $white;
+    margin-bottom: 1.6rem;
+    text-align: center;
+
+    strong {
+      color: $shocking-pink;
+      font-size: 2.4rem;
+    }
+  }
+
+  &-ribbon-ball {
+    margin-bottom: 1.6rem;
+  }
+}

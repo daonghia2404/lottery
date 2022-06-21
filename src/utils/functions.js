@@ -142,3 +142,8 @@ export const copyText = (text) => {
   document.execCommand('copy');
   document.body.removeChild(el);
 };
+
+export const getArrayFrom0To = (numb) =>
+  Array(numb)
+    .fill('')
+    .map((_, i) => i);

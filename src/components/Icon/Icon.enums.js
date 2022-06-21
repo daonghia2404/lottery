@@ -18,6 +18,11 @@ export const EIconName = {
   CirclePlus: 'CirclePlus',
   Search: 'Search',
   Menu: 'Menu',
+  AngleLeft: 'AngleLeft',
+  AngleLineLeft: 'AngleLineLeft',
+  AngleRight: 'AngleRight',
+  AngleLineRight: 'AngleLineRight',
+  Ticket: 'Ticket',
 };
 
 export const EIconColor = {
@@ -25,4 +30,5 @@ export const EIconColor = {
   WHITE: '#fff',
   NOBEL: '#B5B5B5',
   GORSE: '#FFF84F',
+  DOVE_GRAY: '#666666',
 };

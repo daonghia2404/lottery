@@ -1,0 +1,79 @@
+@import '../../assets/styles/global';
+
+.BannerDailyLottery {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  background: url('../../assets/images/bg-banner-lottery.png');
+  background-size: cover;
+  background-position: center;
+
+  &.background-daily {
+    background: url('../../assets/images/bg-banner-lottery-daily.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  &-wrapper {
+    min-height: 47.5rem;
+  }
+
+  &-price {
+    font-size: 5rem;
+    color: #F7C515;
+    text-shadow: 4px 3px 0px #F38C00;
+    font-weight: 900;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FFF456;
+  }
+
+  &-title {
+    position: relative;
+    max-width: 65rem;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    span {
+      position: absolute;
+      font-size: 3.8rem;
+      white-space: nowrap;
+      font-weight: 900;
+      top: calc(50% + 0.5rem);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+    }
+  }
+
+  &-subtitle {
+    font-weight: 900;
+    font-size: 3rem;
+    color: #FFE600;
+    margin-bottom: 0.6rem;
+  }
+
+  &-description {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &-btn {
+    margin-top: 1.6rem;
+
+    .ant-btn {
+      padding: 3rem 7rem;
+      height: auto;
+      border-radius: 5rem;
+
+      span {
+        font-size: 2.5rem;
+        color: #942222;
+      }
+    }
+  }
+}
