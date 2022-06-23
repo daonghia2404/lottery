@@ -3,6 +3,7 @@ import { Link, navigate, useLocation } from '@reach/router';
 import classNames from 'classnames';
 
 import Logo from '@/assets/images/logo.svg';
+import LogoMobile from '@/assets/images/favicon.svg';
 import Button from '@/components/Button';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import WalletModal from '@/containers/WalletModal';
@@ -82,19 +83,35 @@ const Header = () => {
 
   return (
     <div className="Header">
+      <div
+        className={classNames('Header-list-overlay', { active: visibleMenuMobile })}
+        onClick={handleCloseMenuMobile}
+      />
+
       <div className="Header-wrapper flex items-center justify-between">
-        <div className="Header-wrapper-item">
+        <div className="Header-wrapper-item flex items-center">
           <div className="Header-logo">
             <Link to={Paths.Home}>
               <img src={Logo} alt="" />
             </Link>
           </div>
-        </div>
-        <div className="Header-wrapper-item">
+
+          <div className="Header-logo-mobile">
+            <Link to={Paths.Home}>
+              <img src={LogoMobile} alt="" />
+            </Link>
+          </div>
+
           <div className="Header-btn-menu" onClick={visibleMenuMobile ? handleCloseMenuMobile : handleOpenMenuMobile}>
             <Icon name={EIconName.Menu} color={EIconColor.WHITE} />
           </div>
+        </div>
+
+        <div className="Header-wrapper-item flex items-center">
           <div className={classNames('Header-list flex items-center', { active: visibleMenuMobile })}>
+            <div className="Header-list-close" onClick={handleCloseMenuMobile}>
+              <Icon name={EIconName.Close} />
+            </div>
             {dataMenu.map((item, index) => (
               <div
                 key={index}
@@ -107,20 +124,20 @@ const Header = () => {
                 <div className="Header-list-item-title">{item.title}</div>
               </div>
             ))}
-            <div className="Header-list-item btn">
-              {isLogged ? (
-                <DropdownCustom menu={dataMenuDropdown}>
-                  <Button
-                    className="electric-violet"
-                    title="x190a323da..."
-                    iconName={EIconName.Wallet}
-                    iconColor={EIconColor.WHITE}
-                  />
-                </DropdownCustom>
-              ) : (
-                <Button title="CONNECT WALLET" onClick={() => setIsLogged(true)} />
-              )}
-            </div>
+          </div>
+          <div className="Header-list-item btn">
+            {isLogged ? (
+              <DropdownCustom menu={dataMenuDropdown}>
+                <Button
+                  className="electric-violet"
+                  title="x190a323da..."
+                  iconName={EIconName.Wallet}
+                  iconColor={EIconColor.WHITE}
+                />
+              </DropdownCustom>
+            ) : (
+              <Button title="CONNECT WALLET" onClick={() => setIsLogged(true)} />
+            )}
           </div>
         </div>
       </div>

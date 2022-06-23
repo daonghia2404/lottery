@@ -5,6 +5,12 @@ export const dataQuickOptionsNumberTickets = [
   { label: 'MAX', value: 'MAX' },
 ];
 
+export const dataLotteryTickets = [
+  { label: 'X90 Ticket', value: '90' },
+  { label: 'X900 Ticket', value: '900' },
+  { label: 'X9000 Ticket', value: '9000' },
+];
+
 export const EPickTypesValue = {
   AUTO: 'AUTO',
   MANUAL: 'MANUAL',

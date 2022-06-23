@@ -1,0 +1,4 @@
+export const EKeyTab = {
+  LIST_MEMBERS: 'LIST_MEMBERS',
+  LIST_COMMISSION: 'LIST_COMMISSION',
+};

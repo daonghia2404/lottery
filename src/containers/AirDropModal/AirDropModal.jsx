@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Modal from '@/components/Modal';
-import Icon, { EIconName } from '@/components/Icon';
+import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Button from '@/components/Button';
 import CountdownTimer from '@/components/CountdownTimer';
+import PolicyModal from '@/containers/PolicyModal';
 
 import './AirDropModal.scss';
 
 const AirDropModal = ({ visible, onClose }) => {
+  const [isClamed, setIsClamed] = useState(false);
+  const [visiblePolicyModal, setVisiblePolicyModal] = useState(false);
+
+  const handleOpenVisiblePolicyModal = () => {
+    setIsClamed(true);
+    setVisiblePolicyModal(true);
+  };
+
+  const handleCloseVisiblePolicyModal = () => {
+    setVisiblePolicyModal(false);
+  };
+
   return (
     <Modal wrapClassName="AirDropModal-wrapper" visible={visible} onClose={onClose}>
       <div className="AirDropModal-header flex items-center justify-between">
@@ -44,7 +57,11 @@ const AirDropModal = ({ visible, onClose }) => {
                   </div>
                 </div>
                 <div className="AirDropModal-task-item-btn">
-                  <Button title="GO" />
+                  {item % 2 === 0 ? (
+                    <Button title="GO" />
+                  ) : (
+                    <Button className="gray" iconName={EIconName.Check} iconColor={EIconColor.WHITE} />
+                  )}
                 </div>
               </div>
             ))}
@@ -54,10 +71,16 @@ const AirDropModal = ({ visible, onClose }) => {
             <span>End in</span> <CountdownTimer />
           </div>
           <div className="AirDropModal-rule flex justify-center">
-            <Button className="electric-violet" title="RULE & POLICY" />
+            {isClamed ? (
+              <Button title="CLAIM AIRDROP" />
+            ) : (
+              <Button className="electric-violet" title="RULE & POLICY" onClick={handleOpenVisiblePolicyModal} />
+            )}
           </div>
         </div>
       </div>
+
+      <PolicyModal visible={visiblePolicyModal} onClose={handleCloseVisiblePolicyModal} />
     </Modal>
   );
 };

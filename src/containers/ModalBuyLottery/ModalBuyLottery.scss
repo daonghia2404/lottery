@@ -8,6 +8,31 @@
     }
   }
 
+  &-tickets {
+    width: fit-content;
+    margin: 0 auto 2.4rem;
+    background: linear-gradient(270deg, rgba(#757575, 0.3) 0%, rgba(#8C8C8C, 0.3) 97.52%);
+    border-radius: 3.6rem;
+
+    &-item {
+      font-size: 1.4rem;
+      color: $white;
+      cursor: pointer;
+      border-radius: 3.6rem;
+      padding: 1rem 1.6rem;
+      transition: $common-transition;
+      font-weight: 600;
+
+      &:not(.active):hover {
+        color: $lima;
+      }
+
+      &.active {
+        background: linear-gradient(270deg, rgba(#1BF416, 0.3) 0%, rgba(#00ff389c, 0.3) 97.52%);
+      }
+    }
+  }
+
   &-header {
     padding: 0 calc(2.4rem + 2.2rem + 1.6rem) 0 2.4rem;
     margin-bottom: 2rem;

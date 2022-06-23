@@ -10,16 +10,20 @@
 
   &-list {
     margin: 0 -1.5rem;
+    overflow: auto;
 
     &-item {
       padding: 0 1.5rem;
-      flex: 0 0 calc(100% / 4);
-      max-width: 100% / 4;
+      flex: 0 0 27rem;
+      max-width: 27rem;
+      margin: 0 auto;
 
-      @media (max-width: 991px) {
-        flex: 0 0 calc(100% / 2);
-        max-width: 100% / 2;
-        margin-bottom: 5rem;
+      .TokenCard {
+        height: 100%;
+
+        &-body {
+          height: calc(100% - 4.8rem - 1.6rem);
+        }
       }
     }
   }

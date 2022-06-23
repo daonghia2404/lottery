@@ -18,6 +18,7 @@ const App = () => {
             <PublicRoute path={Paths.Referral} component={Pages.Referral} />
             <PublicRoute path={Paths.DailyLottery} component={Pages.DailyLottery} />
             <PublicRoute path={Paths.Lottery} component={Pages.Lottery} />
+            <PublicRoute path={Paths.Dashboard} component={Pages.Dashboard} />
             <Redirect noThrow from={Paths.Rest} to={`${LayoutPaths.Guest}${Paths.Home}`} />
           </Guest>
         </Router>

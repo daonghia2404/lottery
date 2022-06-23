@@ -7,10 +7,15 @@ import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Button from '@/components/Button';
 import { getArrayFrom0To } from '@/utils/functions';
 
-import { EPickTypesValue, dataQuickOptionsNumberTickets, dataPickTypesOptions } from './ModalBuyLottery.data';
+import {
+  EPickTypesValue,
+  dataQuickOptionsNumberTickets,
+  dataPickTypesOptions,
+  dataLotteryTickets,
+} from './ModalBuyLottery.data';
 import './ModalBuyLottery.scss';
 
-const ModalBuyLottery = ({ visible, onClose, onBuy }) => {
+const ModalBuyLottery = ({ visible, onClose, onBuy, lotteryTickets }) => {
   const LIMIT_NUMBER_DIGITS = 36;
   const LIMIT_NUMBER_POSITIONS = 10;
 
@@ -20,6 +25,7 @@ const ModalBuyLottery = ({ visible, onClose, onBuy }) => {
   ];
   const [numberTickets, setNumberTickets] = useState(dataQuickOptionsNumberTickets[0]?.value);
   const [numberDigits, setNumberDigits] = useState([]);
+  const [lotteryTicketsAmount, setLotteryTicketsAmount] = useState(dataLotteryTickets[1]);
   const [pickType, setPickType] = useState(EPickTypesValue.AUTO);
 
   const handleClickQuickOptionsNumberTickets = (value) => {
@@ -66,6 +72,10 @@ const ModalBuyLottery = ({ visible, onClose, onBuy }) => {
     if (isNumber) setNumberTickets(value);
   };
 
+  const handleChangeLotteryTickets = (tickets) => {
+    setLotteryTicketsAmount(tickets);
+  };
+
   useEffect(() => {
     if (pickType === EPickTypesValue.AUTO) handleRandomNumberDigits();
   }, [pickType]);
@@ -77,6 +87,20 @@ const ModalBuyLottery = ({ visible, onClose, onBuy }) => {
       </div>
 
       <div className="ModalBuyLottery-main">
+        {lotteryTickets && (
+          <div className="ModalBuyLottery-tickets flex items-center justify-center">
+            {dataLotteryTickets.map((item) => (
+              <div
+                className={classNames('ModalBuyLottery-tickets-item', {
+                  active: item.value === lotteryTicketsAmount.value,
+                })}
+                onClick={() => handleChangeLotteryTickets(item)}
+              >
+                {item.label}
+              </div>
+            ))}
+          </div>
+        )}
         <div className="ModalBuyLottery-subtitle">Pay with</div>
         <DropdownCustom menu={paymentTypeMenu} overlayClassName="ModalBuyLottery-dropdown">
           <div className="ModalBuyLottery-payment-type flex items-center justify-between">

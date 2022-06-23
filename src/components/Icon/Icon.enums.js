@@ -23,6 +23,18 @@ export const EIconName = {
   AngleRight: 'AngleRight',
   AngleLineRight: 'AngleLineRight',
   Ticket: 'Ticket',
+  LotteryYellow: 'LotteryYellow',
+  Rank: 'Rank',
+  Speaker: 'Speaker',
+  Union: 'Union',
+  Check: 'Check',
+  User: 'User',
+  UserGreen: 'UserGreen',
+  UnionGreen: 'UnionGreen',
+  SpeakerGreen: 'SpeakerGreen',
+  Question: 'Question',
+  ArrowUp: 'ArrowUp',
+  AngleUp: 'AngleUp',
 };
 
 export const EIconColor = {

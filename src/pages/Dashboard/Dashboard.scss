@@ -1,0 +1,299 @@
+@import '../../assets/styles/global';
+
+.Dashboard {
+  padding: 3rem 0;
+
+  &-title {
+    margin-bottom: 1.2rem;
+    font-size: 2.7rem;
+    font-weight: 900;
+    color: $white;
+  }
+
+  &-search {
+    padding: 1.6rem 3rem;
+    background-color: #1E2024;
+    border-radius: 1.5rem;
+
+    &-title {
+      margin-right: 6rem;
+      font-size: 2.7rem;
+      font-weight: 700;
+      color: $white;
+    }
+
+    &-control {
+      &-input {
+        margin-right: 1rem;
+
+        input {
+          min-width: 30rem;
+          background: rgba(#595959, 0.5);
+          box-shadow: inset 0px 2px 2px rgba(31, 31, 31, 0.35);
+          border-radius: 2rem;
+          padding: .6rem 1.5rem;
+          font-size: 1.7rem;
+          color: $white;
+          outline: none;
+          border: none;
+        }
+      }
+
+      &-btn {
+        .Button {
+          .ant-btn {
+            height: auto;
+            padding: .6rem 1.2rem;
+
+            span {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-info {
+    padding: 2.4rem 0;
+    border-bottom: 1px solid #414141;
+    margin-bottom: 2.4rem;
+
+    &-item {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      @media (max-width: 991px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        &:first-child {
+          margin-bottom: 2.4rem;
+        }
+      }
+    }
+
+    &-link {
+      padding: 3.4rem;
+      background: linear-gradient(180deg, #9B1EEE 0%, #68169F 61.98%, #580E8A 100%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 3rem;
+
+      &-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: .4rem;
+        color: $gorse;
+      }
+
+      &-value {
+        padding: 1.2rem;
+        border-radius: 2rem;
+        background: rgba($black, 0.7);
+        box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.25);
+        margin-bottom: 1rem;
+
+        span {
+          display: block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: $white;
+          font-size: 1.5rem;
+        }
+
+        .Icon {
+          flex: 0 0 1.5rem;
+          max-width: 1.5rem;
+          margin-left: .4rem;
+        }
+      }
+
+      &-create {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $white;
+
+        .Icon {
+          flex: 0 0 1.5rem;
+          max-width: 1.5rem;
+          margin-left: .4rem;
+
+        }
+      }
+    }
+
+    &-avatar {
+      width: 13rem;
+      height: 13rem;
+      border-radius: 50%;
+      background: #523DA8;
+      border: 2px solid #863DB3;
+      margin-right: 2.4rem;
+      display: flex;
+
+      .Icon {
+        margin: auto auto 0 auto;
+        width: 80%;
+        height: 80%;
+      }
+    }
+
+    &-content {
+      &-title {
+        font-size: 3.2rem;
+        font-weight: 900;
+        color: $white;
+      }
+
+      &-subtitle {
+        font-size: 2.3rem;
+        font-weight: 500;
+        color: $white;
+
+        .Icon {
+          flex: 0 0 1.8rem;
+          max-width: 1.8rem;
+          margin-left: .4rem;
+        }
+      }
+
+      &-description {
+        font-size: 2.1rem;
+        font-weight: 500;
+        color: #909090;
+
+        span {
+          display: inline-block;
+          background: rgba(22, 14, 24, 0.8);
+          border-radius: 2rem;
+          padding: 1rem 2rem;
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: #9A5CFF;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  &-blance {
+    padding: 2.4rem 0 0;
+    border-bottom: 1px solid #414141;
+    margin-bottom: 2.4rem;
+
+    &-item {
+      background: #191B1E;
+      border-radius: 4rem;
+      width: 100%;
+      max-width: 42.4rem;
+      padding: 1.6rem;
+      margin: 0 4.5rem 4.5rem 0;
+
+      @media (max-width: 768px) {
+        margin: 0 0 3rem 0;
+        max-width: 100%;
+      }
+
+      &-header {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 0.4rem;
+
+        .Icon {
+          flex: 0 0 4rem;
+          max-width: 4rem;
+        }
+      }
+
+      &-body {
+        padding: 1.2rem;
+        background: #1E2024;
+        border-radius: 2.4rem;
+        height: calc(100% - 4rem - 0.4rem);
+
+        @media (max-width: 768px) {
+          height: auto;
+        }
+      }
+
+      &-row {
+        padding: 1rem 0;
+
+        &-text {
+          font-size: 1.6rem;
+          font-weight: 700;
+          color: $white;
+
+          &.green {
+            color: #41E233;
+          }
+        }
+      }
+    }
+  }
+
+  &-cards {
+    &-item {
+      flex: 0 0 calc(100% / 5 - 1.5rem);
+      max-width: calc(100% / 5 - 1.5rem);
+      margin-bottom: 3rem;
+      padding: 1.6rem 1.2rem;
+      background: #191B1E;
+      border-radius: 3rem;
+
+      @media (max-width: 991px) {
+        flex: 0 0 calc(100% / 2 - 1.5rem);
+        max-width: calc(100% / 2 - 1.5rem);
+      }
+
+      &-header {
+        margin-bottom: 1.2rem;
+      }
+
+      &-body {
+        border-radius: 2.4rem;
+        background: #1E2024;
+      }
+
+      &-title {
+        font-size: 1.2rem;
+        color: $white;
+        font-weight: 700;
+      }
+
+      &-tooltip {
+        .Icon {
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+      }
+
+      &-value {
+        padding: 4.5rem 0 1.6rem;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: $white;
+
+        .Icon {
+          flex: 0 0 2.8rem;
+          max-width: 2.8rem;
+          margin-left: 1rem;
+        }
+      }
+
+      &-arrow {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #79EF35;
+        padding: 1rem;
+
+        .Icon {
+          width: 2rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

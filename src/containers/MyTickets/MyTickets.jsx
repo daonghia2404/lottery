@@ -9,7 +9,7 @@ import ModalBuyLottery from '@/containers/ModalBuyLottery';
 import { EKeyTab } from './MyTickets.data';
 import './MyTickets.scss';
 
-const MyTickets = () => {
+const MyTickets = ({ backgroundDaily }) => {
   const [keyTab, setKeyTab] = useState(EKeyTab.MY_TICKETS);
   const [visibleLotteryResultsModal, setVisibleLotteryResultsModal] = useState(false);
   const [visibleBuyLotteryModal, setVisibleBuyLotteryModal] = useState(false);
@@ -86,7 +86,12 @@ const MyTickets = () => {
 
       <ModalLotteryResults visible={visibleLotteryResultsModal} onClose={handleCloseLotteryResultsModal} />
 
-      <ModalBuyLottery visible={visibleBuyLotteryModal} onClose={handleCloseBuyLotteryModal} onBuy={handleBuyTickets} />
+      <ModalBuyLottery
+        lotteryTickets={!backgroundDaily}
+        visible={visibleBuyLotteryModal}
+        onClose={handleCloseBuyLotteryModal}
+        onBuy={handleBuyTickets}
+      />
     </div>
   );
 };

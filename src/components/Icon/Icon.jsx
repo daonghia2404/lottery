@@ -28,6 +28,18 @@ import AngleLineLeft from './AngleLineLeft';
 import AngleRight from './AngleRight';
 import AngleLineRight from './AngleLineRight';
 import Ticket from './Ticket';
+import LotteryYellow from './LotteryYellow';
+import Rank from './Rank';
+import Speaker from './Speaker';
+import Union from './Union';
+import Check from './Check';
+import User from './User';
+import UserGreen from './UserGreen';
+import UnionGreen from './UnionGreen';
+import SpeakerGreen from './SpeakerGreen';
+import Question from './Question';
+import ArrowUp from './ArrowUp';
+import AngleUp from './AngleUp';
 
 const Icon = ({ name, className, color, onClick }) => {
   const renderIcon = () => {
@@ -80,6 +92,30 @@ const Icon = ({ name, className, color, onClick }) => {
         return <AngleLineRight color={color} />;
       case EIconName.Ticket:
         return <Ticket color={color} />;
+      case EIconName.LotteryYellow:
+        return <LotteryYellow color={color} />;
+      case EIconName.Rank:
+        return <Rank color={color} />;
+      case EIconName.Speaker:
+        return <Speaker color={color} />;
+      case EIconName.Union:
+        return <Union color={color} />;
+      case EIconName.Check:
+        return <Check color={color} />;
+      case EIconName.User:
+        return <User color={color} />;
+      case EIconName.UserGreen:
+        return <UserGreen color={color} />;
+      case EIconName.UnionGreen:
+        return <UnionGreen color={color} />;
+      case EIconName.SpeakerGreen:
+        return <SpeakerGreen color={color} />;
+      case EIconName.Question:
+        return <Question color={color} />;
+      case EIconName.ArrowUp:
+        return <ArrowUp color={color} />;
+      case EIconName.AngleUp:
+        return <AngleUp color={color} />;
 
       default:
         return <></>;

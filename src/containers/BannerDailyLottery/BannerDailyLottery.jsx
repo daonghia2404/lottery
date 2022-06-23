@@ -57,7 +57,12 @@ const BannerDailyLottery = ({ price, title, subtitle, showCountdown, backgroundD
 
       <ModalLotteryResults visible={visibleLotteryResultsModal} onClose={handleCloseLotteryResultsModal} />
 
-      <ModalBuyLottery visible={visibleBuyLotteryModal} onClose={handleCloseBuyLotteryModal} onBuy={handleBuyTickets} />
+      <ModalBuyLottery
+        lotteryTickets={!backgroundDaily}
+        visible={visibleBuyLotteryModal}
+        onClose={handleCloseBuyLotteryModal}
+        onBuy={handleBuyTickets}
+      />
     </div>
   );
 };

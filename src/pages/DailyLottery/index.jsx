@@ -26,7 +26,7 @@ const DailyLottery = () => {
         backgroundDaily
       />
       <TicketsReward backgroundDaily rules={winningRulesList} />
-      <MyTickets />
+      <MyTickets backgroundDaily />
       <HowToPlay backgroundDaily />
     </div>
   );

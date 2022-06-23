@@ -35,16 +35,25 @@
     }
 
     &-icon {
-      width: 3.4rem;
-      margin: 0 auto .4rem;
+      display: flex;
+      height: 6rem;
+      margin: 0 auto 1rem;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        object-fit: cover;
+      }
     }
 
     &-title {
-      font-size: 3.8rem;
+      font-size: 2.3rem;
       font-weight: 800;
       color: $white;
       margin-bottom: 1.6rem;
       text-align: center;
+      white-space: nowrap;
     }
 
     &-description {

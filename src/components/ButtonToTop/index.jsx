@@ -6,10 +6,10 @@ import './ButtonToTop.scss';
 
 const ButtonToTop = () => {
   return (
-    <></>
-    // <a href="#" className="ButtonToTop flex items-center justify-center">
-    //   <Icon name={EIconName.ButtonToTop} color={EIconColor.WHITE} />
-    // </a>
+    <a href="#" className="ButtonToTop flex items-center justify-center text-center flex-col">
+      <Icon name={EIconName.AngleUp} color={EIconColor.WHITE} />
+      Top
+    </a>
   );
 };
 

@@ -1,0 +1,56 @@
+@import '../../assets/styles/global';
+
+.ListMembersData {
+  &-tabs {
+    background: linear-gradient(270deg, rgba(#757575, 0.3) 0%, rgba(#8C8C8C, 0.3) 97.52%);
+    border-radius: 3.6rem;
+    width: fit-content;
+    margin: 0 auto 3rem;
+
+    &-wrapper {
+      @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    &-item {
+      padding: 2rem 4rem;
+      font-size: 2rem;
+      font-weight: 600;
+      color: $white;
+      transition: $common-transition;
+      border-radius: 3.6rem;
+      cursor: pointer;
+      white-space: nowrap;
+
+      @media (max-width: 768px) {
+        padding: 1.6rem 3.2rem;
+      }
+
+      @media (max-width: 575px) {
+        padding: 1.6rem 2.4rem;
+      }
+
+      &:not(:first-child) {
+        margin-left: -2rem;
+      }
+
+      &:not(.active):hover {
+        color: $lima;
+      }
+
+      &.active {
+        background: linear-gradient(270deg, rgba(#1BF416, 0.3) 0%, rgba(#00ff389c, 0.3) 97.52%);
+      }
+
+      .Icon {
+        flex: 0 0 3rem;
+        max-width: 3rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &-main {}
+  }
+}

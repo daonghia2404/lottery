@@ -24,6 +24,7 @@ const Invite = lazy(() => retryLoadComponent(() => import('@/pages/Invite')));
 const Referral = lazy(() => retryLoadComponent(() => import('@/pages/Referral')));
 const DailyLottery = lazy(() => retryLoadComponent(() => import('@/pages/DailyLottery')));
 const Lottery = lazy(() => retryLoadComponent(() => import('@/pages/Lottery')));
+const Dashboard = lazy(() => retryLoadComponent(() => import('@/pages/Dashboard')));
 
 export const LayoutPaths = {
   Auth: '/auth',
@@ -41,6 +42,7 @@ export const Paths = {
   Referral: '/referral',
   DailyLottery: '/daily-lottery',
   Lottery: '/lottery',
+  Dashboard: '/dashboard',
   Rest: '*',
 };
 
@@ -50,6 +52,7 @@ export const Pages = {
   Referral,
   Lottery,
   DailyLottery,
+  Dashboard,
 };
 
 export const AuthRoute = ({ component: Component, ...rest }) => {

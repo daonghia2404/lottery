@@ -13,6 +13,12 @@
     }
   }
 
+  &.gray {
+    .ant-btn {
+      background: #797979;
+    }
+  }
+
   .ant-btn {
     background: linear-gradient(180deg, #5AD71A 0%, #58D319 0.01%, #50C613 100%);
     padding: 0rem 1.5rem;
